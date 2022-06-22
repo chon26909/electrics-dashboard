@@ -1,0 +1,210 @@
+.App {
+  // background-color: whitesmoke;
+  min-height: 100vh;
+  background-image: url('https://cdn.wallpapersafari.com/74/49/F7dPYn.jpg');
+  background-size: cover;
+
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: rgb(30, 30, 30);
+  padding: 15px;
+}
+
+.bg-green {
+  background: #56ae5a;
+}
+
+.bg-yellow {
+  background-color: #ffdd94;
+}
+
+.bg-purple {
+  background-color: #ccabd8;
+}
+
+
+h3 {
+  font-size: 30px;
+  margin: 10px 0;
+  color: white;
+}
+
+.overview {
+
+  margin-top: 1rem;
+
+  .section-d {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-gap: 2rem;
+
+    .card {
+      background-color: white;
+      // color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #b2b2b2;
+      height: auto;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      align-items: center;
+      grid-gap: 0.2rem;
+      color: rgb(61, 61, 61);
+
+      img {
+        width: 100%;
+
+        &:nth-child(1) {
+          width: 70%;
+        }
+      }
+
+      .month {
+        font-size: 30px;
+        font-weight: 700;
+      }
+
+      // .type {
+      //   font-size: 24px;
+      //   font-weight: 700;
+      // }
+
+      // .consumption {
+      //   margin-top: 1rem;
+      //   font-size: 22px;
+      //   font-weight: 500;
+
+
+      //   .unit,
+      //   .price,
+      //   .co2 {
+      //     display: grid;
+      //     grid-template-columns: 100px 1fr;
+      //     align-items: center;
+
+      //     .value {
+      //       text-align: right;
+      //       margin-right: 20px;
+      //     }
+      //     img { 
+      //       width: 100%;
+      //     }
+      //   }
+
+      //   .co2 .under {
+      //     font-size: 15px;
+      //   }
+      // }
+    }
+
+    @media screen and (max-width: 700px) {
+      .card {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+.electrics {
+  margin-top: 2rem;
+  min-height: 180px;
+
+  .no {
+    color: white;
+  }
+
+  .list {
+
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 5px #b2b2b2;
+      // border: 1px solid lightgray;
+      height: 70px;
+      padding: 25px 30px;
+
+      .type {
+        font-size: 22px;
+        font-weight: 700;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+
+      .value {
+        margin-top: 5px;
+        font-size: 20px;
+        font-weight: 500;
+        // .unit {
+
+        // }
+      }
+    }
+  }
+}
+
+
+.history {
+
+  margin-top: 2rem;
+
+  .table {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+    background: white;
+
+    .head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+      background-color: lightgray;
+      font-weight: 700;
+    }
+
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 10px;
+
+      &:nth-child(even) {
+        background-color: whitesmoke;
+      }
+
+      .name {
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+  h3 {
+    font-size: 26px;
+  }
+
+  .App {
+    background-color: #5941a3;
+    background-image: none;
+  }
+}
